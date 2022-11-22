@@ -10,11 +10,11 @@ const Navbar = () => {
         <div className='app__menu'>
             <img src={logo} alt='logo' className='app__menu-logo' />
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Collections</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+                <li>Contact</li>
             </ul>
         </div>
         <div className="app__cart">
