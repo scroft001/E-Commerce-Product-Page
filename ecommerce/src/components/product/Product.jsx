@@ -9,6 +9,8 @@ import product3Thumb from '../../images/image-product-3-thumbnail.jpg';
 import product4 from '../../images/image-product-4.jpg';
 import product4Thumb from '../../images/image-product-4-thumbnail.jpg';
 
+import './product.scss';
+
 
 const heroImages = [product1, product2, product3, product4];
 const thumbImages = [product1Thumb, product2Thumb, product3Thumb, product4Thumb];
@@ -30,12 +32,12 @@ const Product = () => {
         <p className='features'>These low-profile sneakers are your perfect casual wear companion. Featuring a 
   durable rubber outer sole, they'll withstand everything the weather can offer.</p>
         <div className='price'>
-          <h3>$125</h3>
+          <h3>$125.00</h3>
           <div className='price__discount'>
             50%
           </div>
         </div>
-        <p className='previousPrice'>$250</p>
+        <p className='previousPrice'>$250.00</p>
         {/* <Purchase /> */}
       </section>
     </main>
