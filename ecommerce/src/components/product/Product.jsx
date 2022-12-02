@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Purchase } from '..'
 import product1 from '../../images/image-product-1.jpg';
 import product1Thumb from '../../images/image-product-1-thumbnail.jpg';
@@ -16,14 +16,17 @@ const heroImages = [product1, product2, product3, product4];
 const thumbImages = [product1Thumb, product2Thumb, product3Thumb, product4Thumb];
 
 const Product = () => {
+
+  const [hero, setHero] = useState(heroImages[0])
+
   return (
     <main className='app__product'>
       <section className='app__product-images'>
         <div className='main-image'>
-          <img src={product1} alt="Sneaker" />
+          <img src={hero} alt="Sneaker" />
         </div>
         <div className='image-selector'>
-          {thumbImages.map(thumbImage => <img src={thumbImage} alt="Image Selector" />)}
+          {thumbImages.map((thumbImage, index) => <img onClick={() => setHero(heroImages[index])} src={thumbImage} alt="Thumbnail" key={index} />)}
         </div>
       </section>
       <section className='app__product-description'>
