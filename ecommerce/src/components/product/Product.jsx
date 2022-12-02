@@ -15,9 +15,17 @@ import './product.scss';
 const heroImages = [product1, product2, product3, product4];
 const thumbImages = [product1Thumb, product2Thumb, product3Thumb, product4Thumb];
 
+
+
 const Product = () => {
 
-  const [hero, setHero] = useState(heroImages[0])
+  const [hero, setHero] = useState(heroImages[0]);
+  const [selected, setSelected] = useState(false);
+
+  const chosen = (newIndex) => {
+    setHero(heroImages[newIndex]);
+    setSelected(true);
+  }
 
   return (
     <main className='app__product'>
@@ -26,7 +34,7 @@ const Product = () => {
           <img src={hero} alt="Sneaker" />
         </div>
         <div className='image-selector'>
-          {thumbImages.map((thumbImage, index) => <img onClick={() => setHero(heroImages[index])} src={thumbImage} alt="Thumbnail" key={index} />)}
+          {thumbImages.map((thumbImage, index) => <img onClick={() => chosen(index) } src={thumbImage} alt="Thumbnail" key={index} />)}
         </div>
       </section>
       <section className='app__product-description'>
