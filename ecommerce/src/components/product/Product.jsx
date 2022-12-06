@@ -20,13 +20,21 @@ const thumbImages = [product1Thumb, product2Thumb, product3Thumb, product4Thumb]
 const Product = () => {
 
   const [hero, setHero] = useState(heroImages[0]);
-  const [selected, setSelected] = useState(false);
 
   const chosen = (newIndex) => {
     setHero(heroImages[newIndex]);
-    setSelected(true);
+    const pic0 = document.querySelector("#pic0");
+    const pic1 = document.querySelector("#pic1");
+    const pic2 = document.querySelector("#pic2");
+    const pic3 = document.querySelector("#pic3");
+    const pics = [pic0, pic1, pic2, pic3];
+    //remove class from all others
+    pics.forEach(function(pic) {
+      pic.classList.remove("selected");
+    })
+    //add class to selected
+    document.querySelector("#pic"+newIndex).classList.add("selected");
   }
-
   return (
     <main className='app__product'>
       <section className='app__product-images'>
@@ -34,7 +42,9 @@ const Product = () => {
           <img src={hero} alt="Sneaker" />
         </div>
         <div className='image-selector'>
-          {thumbImages.map((thumbImage, index) => <img onClick={() => chosen(index) } src={thumbImage} alt="Thumbnail" key={index} />)}
+          {thumbImages.map((thumbImage, index) => <div className='imgDiv' id={`pic${index}`} onLoad={() => chosen(0) }>
+            <img onClick={() => chosen(index) } src={thumbImage} alt="Thumbnail" key={index}  />
+          </div>)}
         </div>
       </section>
       <section className='app__product-description'>

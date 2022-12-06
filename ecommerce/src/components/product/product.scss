@@ -32,9 +32,13 @@
     justify-content: space-between;
     margin-top: 2rem;
     flex-wrap: nowrap;
-    img{
+    .imgDiv{
         width: 22%;
         border-radius: 20px;
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
     }
 }
 
@@ -82,4 +86,11 @@
     margin-top: -1rem;
     color: var(--grayish-blue);
     text-decoration: line-through;
+}
+
+.selected{
+    border: 3px solid var(--orange);
+    img{
+        opacity: 20%;
+    }
 }
