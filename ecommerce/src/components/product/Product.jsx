@@ -59,7 +59,7 @@ const Product = () => {
           </div>
         </div>
         <p className='previousPrice'>$250.00</p>
-        {/* <Purchase /> */}
+        <Purchase />
       </section>
     </main>
   )
