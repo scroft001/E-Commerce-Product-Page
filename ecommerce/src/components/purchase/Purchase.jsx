@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import cartIcon from '../../images/icon-cart.svg';
 
+import './purchase.scss';
+
 const Purchase = () => {
 
     const [amount, setAmount] = useState(0)
