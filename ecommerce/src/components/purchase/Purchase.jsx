@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import cartIcon from '../../images/icon-cart.svg';
+import {ReactComponent as CartIcon} from '../../images/icon-cart-white.svg';
+// import cartIcon from '../../images/icon-cart.svg';
 
 import './purchase.scss';
 
@@ -23,7 +24,8 @@ const Purchase = () => {
             <div onClick={() => addAmount()} className='amountCounter__plus'>+</div>
         </div>
         <button>
-            <img src={cartIcon} alt="cart" />
+            <CartIcon fill="white" stroke="white" />
+            {/* <img src={cartIcon} alt="cart" /> */}
             <p>Add to cart</p>
         </button>
     </div>
