@@ -25,7 +25,6 @@ const Purchase = () => {
         </div>
         <button>
             <CartIcon />
-            {/* <img src={cartIcon} alt="cart" /> */}
             <p>Add to cart</p>
         </button>
     </div>
