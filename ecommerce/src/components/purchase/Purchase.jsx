@@ -24,7 +24,7 @@ const Purchase = () => {
             <div onClick={() => addAmount()} className='amountCounter__plus'>+</div>
         </div>
         <button>
-            <CartIcon fill="white" stroke="white" />
+            <CartIcon />
             {/* <img src={cartIcon} alt="cart" /> */}
             <p>Add to cart</p>
         </button>
