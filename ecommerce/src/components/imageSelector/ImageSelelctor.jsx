@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Lightbox} from '..';
 import './imageSelector.scss';
 import product1 from '../../images/image-product-1.jpg';
 import product1Thumb from '../../images/image-product-1-thumbnail.jpg';
@@ -15,6 +16,7 @@ const thumbImages = [product1Thumb, product2Thumb, product3Thumb, product4Thumb]
 const ImageSelelctor = () => {
 
     const [hero, setHero] = useState(heroImages[0]);
+    const [showLight, setShowLight] = useState(false);
 
     const chosen = (newIndex) => {
       setHero(heroImages[newIndex]);
@@ -31,10 +33,15 @@ const ImageSelelctor = () => {
       document.querySelector("#pic"+newIndex).classList.add("selected");
     }
 
+    const showLightbox = () => {
+        setShowLight(true);
+    }
+
   return (
     <section className='app__product-images'>
+        <Lightbox show={showLight} />
         <div className='main-image'>
-          <img src={hero} alt="Sneaker" />
+          <img onClick={() => showLightbox()} src={hero} alt="Sneaker" />
         </div>
         <div className='image-selector'>
           {thumbImages.map((thumbImage, index) => <div className='imgDiv' id={`pic${index}`} onLoad={() => chosen(0) }>
