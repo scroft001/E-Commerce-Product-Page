@@ -8,7 +8,7 @@ const Product = () => {
   
   return (
     <main className='app__product'>
-      <Lightbox />
+      {/* <Lightbox /> */}
       <ImageSelector />
       <section className='app__product-description'>
         <h4>Sneaker Company</h4>

@@ -39,6 +39,7 @@ const ImageSelelctor = () => {
 
   return (
     <section className='app__product-images'>
+        {/* <Lightbox show={showLight} /> */}
         <div className='main-image'>
           <img onClick={() => showLightbox()} src={hero} alt="Sneaker" />
         </div>
