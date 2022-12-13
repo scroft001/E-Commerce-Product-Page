@@ -46,3 +46,19 @@ nav{
     }
 }
 
+.app__menu-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    height: 100vh;
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+}

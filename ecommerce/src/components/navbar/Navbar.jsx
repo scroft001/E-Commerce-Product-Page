@@ -1,8 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './navbar.scss';
 import logo from '../../images/logo.svg';
 import cartIcon from '../../images/icon-cart.svg';
 import avatar from '../../images/image-avatar.png';
+
+const Menu = () => {
+  return (
+    <>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </>
+  )
+}
 
 const Navbar = () => {
   return (
@@ -16,6 +30,9 @@ const Navbar = () => {
                 <li>About</li>
                 <li>Contact</li>
             </ul>
+            <div className='app__menu-mobile'>
+              <Menu/>
+            </div>
         </div>
         <div className="app__cart">
             <img src={cartIcon} alt='cart' className='app__cart-icon' />
