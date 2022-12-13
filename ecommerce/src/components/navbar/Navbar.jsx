@@ -3,11 +3,13 @@ import './navbar.scss';
 import logo from '../../images/logo.svg';
 import cartIcon from '../../images/icon-cart.svg';
 import avatar from '../../images/image-avatar.png';
+import close from '../../images/icon-close.svg'
 
 const Menu = () => {
   return (
     <>
       <ul>
+        <img src={close} alt='logo' />
         <li>Collections</li>
         <li>Men</li>
         <li>Women</li>

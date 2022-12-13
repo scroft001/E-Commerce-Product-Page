@@ -57,8 +57,18 @@ nav{
     left: 0;
     background-color: var(--white);
     height: 100vh;
+    z-index: 1;
+    img{
+        width: 20%;
+        margin-bottom: 2rem;
+    }
     ul{
         display: flex;
         flex-direction: column;
+        li{
+            margin: 1rem 0rem;
+            color: var(--black);
+            font-weight: 700;
+        }
     }
 }
