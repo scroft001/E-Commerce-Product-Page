@@ -8,7 +8,7 @@ const Lightbox = (props) => {
   return (
     <section className={`app__product-images-lightbox ${props.show ? "lightShow" : "lightHide"}`}>
         <img src={x} alt="close the lightbox" />
-        <ImageSelector />
+        
     </section>
   )
 }
